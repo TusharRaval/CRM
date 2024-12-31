@@ -1,38 +1,360 @@
-.App {
-  text-align: center;
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #F7F8F8; /* Soft Grey */
+  color: #333333; /* Dark Grey for text */
+}
+/* Add this CSS to your stylesheet */
+.blur-background {
+  filter: blur(5px); /* Adjust the blur intensity as needed */
+  pointer-events: none; /* Prevent interactions with blurred elements */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Navbar Styles */
+.navbar {
+  background-color: #1E3A5F; /* deep Blue */
+  padding: 15px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar-brand {
+  color: #FFFFFF;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  color: #FFFFFF;
+}
+
+.navbar-toggler-icon {
+  background-color: #FFFFFF;
+}
+
+/* Hero Section */
+.bt{
+  width:400px;
+}
+#home img{
+  width:700px;
+}
+
+.ho{
+  padding:100px;
+  padding-right:50px;
+}
+
+
+#home {
+  background-color: #FFFFFF;
+  padding: 80px 0;
+}
+
+.display-4 {
+  color: #003366; /* Dark Blue */
+  font-weight: bold;
+}
+
+button.btn-primary {
+  background-color: #007BFF; /* Bright Blue */
+  border-color: #007BFF;
+}
+
+button.btn-outline-secondary {
+  border-color: #4C9EC7; /* Sky Blue */
+  color: #4C9EC7;
+}
+
+img.img-fluid {
+  max-width: 100%;
+}
+
+/* Features Section */
+.feature-box {
+  background-color: #FFFFFF;
+  border: 1px solid #D6D9DC; /* Light Grey */
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.feature-title {
+  color: #003366;
+}
+
+/* Pricing Section */
+.pr{
+  padding:10px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #D6D9DC;
+  height:50px;
+  margin:50px;
+}
+
+.card-body {
+  padding: 40px;
+}
+
+.card-title {
+  color: #003366;
+}
+
+.card-price {
+  color: #68A1D7; /* Sky Blue */
+}
+
+/* Testimonials Section */
+.carousel-item {
+  background-color: #E1E4E8; /* Light Grey */
+  padding: 50px 0;
+}
+
+.carousel-item img {
+  border-radius: 50%;
+}
+
+.blockquote {
+  font-style: italic;
+  color: #333333;
+}
+#testimonials footer{
+  background-color: #E1E4E8;
+}
+
+/*security sections*/
+.se{
+  padding:40px;
+}
+/*Subscription section*/
+.sub{
+  height:5vh;
+  padding:100px;
+  background-color:#fffff;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #1E3A5F; /* Navy Blue */
+  color: #FFFFFF;
+  padding: 30px 0;
+}
+
+.footer a {
+  color: #000000; /* Sky Blue */
+}
+
+.footer .container {
+  max-width: 1140px;
+}
+
+/* Form Inputs and Buttons */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #D6D9DC;
+}
+
+button[type="submit"] {
+  background-color: #28A745; /* Green */
+  border-color: #28A745;
+  color: #FFFFFF;
+}
+
+button[type="submit"]:hover {
+  background-color: #007BFF; /* Bright Blue */
+  border-color: #007BFF;
+}
+
+/* Spacing */
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Fade-in animation for cards */
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
+/* Button hover effects */
+button:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Smooth transition for navbar items */
+.navbar-nav .nav-link {
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #28A745; /* Green */
+}
+/* Apply full viewport height to each section */
+section {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Background colors for each section */
+#home {
+  background-color: #f0f8ff; /* Light blue background */
+}
+
+#features {
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+#pricing {
+  background-color: #e9ecef; /* Lighter gray */
+}
+
+#testimonials {
+  background-color: #f1f3f5; /* Soft light gray */
+}
+
+#contact {
+  background-color: #ffffff; /* White background */
+  color:#f1010;
+}
+
+/* Footer styling */
+footer {
+  background-color: #3590ae; /* D */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+footer h5 {
+  color: #ffc107; /* Gold for footer section titles */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+footer a {
+  color: #ffc107; /* Gold links */
+}
+
+footer .text-light {
+  color: #ced4da !important; /* Lighter text */
+}
+
+
+.full-height {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Home Section */
+#home {
+  background-color: #f8f9fa;  /* Light background */
+}
+
+/* Features Section */
+#features {
+  background-color: #e9ecef;  /* Light gray background */
+}
+
+/* Pricing Section */
+#pricing {
+  background-color: #f1f3f5;  /* Light cool background */
+}
+
+/* Testimonials Section */
+#testimonials {
+  background-color:#e9ecef; /* Dark background */
+  color: #ffffff;  /* White text for contrast */
+}
+
+/* Contact Section */
+#contact {
+  background-color:  #f8f9fa;  /* Green background */
+  color: #000000;  /* White text */
+}
+
+/* Footer Section */
+footer {
+  background-color: #3590ae;  /* Dark footer background */
+  color: #ffffff;  /* White text */
+}
+
+
+/* Features sections */
+
+/* Global Section Styling */
+#features {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  padding:80px;
+}
+
+#features h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Feature Box Styling */
+.feature-box {
+  background: #fff;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  text-align: center;
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #555;
+  margin-top: 15px;
+}
+
+.feature-box p {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.5;
+}
+
+/* Icon Styling */
+.feature-box svg {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.feature-box:hover svg {
+  color: #007bff; /* Primary hover color */
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #features h2 {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .feature-box {
+    padding: 15px;
+  }
+
+  .feature-box h3 {
+    font-size: 1.3rem;
+  }
+
+  .feature-box p {
+    font-size: 0.9rem;
   }
 }

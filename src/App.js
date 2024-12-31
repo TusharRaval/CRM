@@ -1,24 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Import Bootstrap JS
+
+import { BrowserRouter as  Route, Routes } from 'react-router-dom';
+import { FormDataProvider } from './context/context';
+
+import Navbar from './Navbar';
+
+import FeaturesPage from './FeaturesPage';
+import PricingPage from './PricingPage';
+import SecurityPage from './SecurityPage';
+import ContactForm from './ContactForm';
+import SubscribeSection from './SubscribeSection';
+
+import FormPage from './FormPage';
+import WelcomePage from './WelcomePage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FormDataProvider>
+    
+     
+        {/* Navbar is placed outside of <Routes> */}
+        
+
+        {/* Routes for different pages */}
+        <Routes>
+          <Route path="/" element={<Navbar />} />
+          <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/security" element={<SecurityPage />} />
+          <Route path="/contact" element={<ContactForm />} />
+          <Route path="/subscribe" element={<SubscribeSection />} />
+          <Route path="/form" element={<FormPage />} />
+          <Route path="/well" element={<WelcomePage />} /> {/* Welcome Page */}
+        </Routes>
+
+        {/* Footer is placed outside of <Routes> */}
+        
+     
+    </FormDataProvider>
   );
 }
 
